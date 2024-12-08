@@ -1,0 +1,16 @@
+services:
+  postgres:
+    container_name: postgres-gs-app
+    image: postgres:17.2-alpine
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: digital_store_db
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 5444:5432
+volumes:
+  postgres:
+    driver: local
