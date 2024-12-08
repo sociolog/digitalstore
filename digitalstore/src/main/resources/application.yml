@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: digitalstore
   datasource:
     url: jdbc:postgresql://localhost:5444/digital_store_db
     username: username
